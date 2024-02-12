@@ -14,7 +14,7 @@ const app = express();
 // middleware
 app.use(
   cors({
-    origin: ["https://workout-buddy-frontend-sepia.vercel.app/"],
+    origin: ["https://workout-buddy-frontend-sepia.vercel.app"],
     method: ["POST", "GET"],
     credential: true,
   })
