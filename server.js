@@ -12,7 +12,13 @@ const userRoutes = require("./routes/users");
 const app = express();
 
 // middleware
-app.use(cors());
+app.use(
+  cors({
+    origin: ["https://workout-buddy-frontend-sepia.vercel.app"],
+    method: ["POST", "GET"],
+    credential: true,
+  })
+);
 app.use(express.json());
 
 app.use((req, res, next) => {
